@@ -14,14 +14,10 @@ void Array::input()
 		cin >> data[i];
 	}
 }
-Array::Array(int count, ...)
+Array::Array(int count, ...):capacity(0),data(nullptr)
 {
 	if (count <= 0)
-	{
-		capacity = 0;
-		data = nullptr;
 		return;
-	}
 	capacity = count;
 	data = new int [capacity];
 	va_list myList;
